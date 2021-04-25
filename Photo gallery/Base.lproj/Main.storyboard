@@ -30,7 +30,7 @@
         <!--Photo gallery-->
         <scene sceneID="b1D-oc-Umr">
             <objects>
-                <tabBarController id="UyP-KZ-VbB" sceneMemberID="viewController">
+                <tabBarController id="UyP-KZ-VbB" customClass="StartViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Photo gallery" id="QDW-MM-qb0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PBQ-um-vEp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -63,7 +63,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="N2q-Dw-tin" kind="showDetail" id="S4Y-cq-eoo"/>
+                                    <segue destination="N2q-Dw-tin" kind="show" id="zLY-cf-0Kp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -87,10 +87,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-Cg-zU2">
-                                <rect key="frame" x="20" y="64" width="374" height="379"/>
+                                <rect key="frame" x="20" y="160" width="374" height="331"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-TU-o9l">
-                                <rect key="frame" x="20" y="463" width="374" height="379"/>
+                                <rect key="frame" x="20" y="511" width="374" height="331"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3NJ-2A-tUH"/>
@@ -106,6 +106,7 @@
                             <constraint firstItem="pmw-TU-o9l" firstAttribute="top" secondItem="Rzd-Cg-zU2" secondAttribute="bottom" constant="20" id="uKw-Zc-oAe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ld1-QK-wqv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYg-pJ-DzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,7 +115,7 @@
         <!--Cars-->
         <scene sceneID="0JF-WR-TGW">
             <objects>
-                <tableViewController id="PzT-Wq-b3y" sceneMemberID="viewController">
+                <tableViewController id="PzT-Wq-b3y" customClass="CarsListViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dd0-L4-ILS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +129,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ESI-SQ-2Gn" kind="showDetail" id="HXt-wO-FAV"/>
+                                    <segue destination="ESI-SQ-2Gn" kind="show" id="I3h-8a-HDO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -143,19 +144,19 @@
             </objects>
             <point key="canvasLocation" x="1217" y="-501"/>
         </scene>
-        <!--View Controller-->
+        <!--Details Cars View Controller-->
         <scene sceneID="Cd0-d6-a9E">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ESI-SQ-2Gn" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ESI-SQ-2Gn" customClass="DetailsCarsViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bd0-GB-gJK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9R-9M-LTb">
-                                <rect key="frame" x="20" y="64" width="374" height="379"/>
+                                <rect key="frame" x="20" y="160" width="374" height="331"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqD-uE-6qe">
-                                <rect key="frame" x="20" y="463" width="374" height="379"/>
+                                <rect key="frame" x="20" y="511" width="374" height="331"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WIe-oa-tZp"/>
@@ -171,6 +172,11 @@
                             <constraint firstItem="nqD-uE-6qe" firstAttribute="top" secondItem="a9R-9M-LTb" secondAttribute="bottom" constant="20" id="zWH-TA-Bxu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LtK-wI-l3o"/>
+                    <connections>
+                        <outlet property="imageOne" destination="a9R-9M-LTb" id="zaK-3t-6TM"/>
+                        <outlet property="imageTwo" destination="nqD-uE-6qe" id="u01-vt-ktl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y82-Vp-Qro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

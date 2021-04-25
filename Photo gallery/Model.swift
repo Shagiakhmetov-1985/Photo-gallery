@@ -6,14 +6,21 @@
 //
 
 struct Cars {
+    let name: String
+    let image: String
     
-    let name = [
-        "Audi A3", "Audi A4", "Audi A6", "Audi Q3", "Audi Q5", "Audi Q7"
-    ]
-    
-    let image = [
-    "AudiA3", "AudiA3(2)", "AudiA4", "AudiA4(2)", "AudiA6", "AudiA6(2)",
-        "AudiQ3", "AudiQ3(2)", "AudiQ5", "AudiQ5(2)", "AudiQ7", "AudiQ7(2)"
-    ]
-    
+    static func getDatabase() -> [Cars] {
+        var cars: [Cars] = []
+        
+        let names = Database.shared.name
+        let images = Database.shared.image
+        
+        let iterationCount = min(names.count, images.count)
+        
+        for index in 0..<iterationCount {
+            let car = Cars(name: names[index], image: images[index])
+            cars.append(car)
+        }
+        return cars
+    }
 }
